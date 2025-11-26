@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZMTECH | Book Store API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/elements-style.css">
+    <style>
+        .api-container {
+            margin-top: 2rem;
+        }
+        .api-endpoint {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .endpoint-header {
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+        .endpoint-header:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .method {
+            font-weight: bold;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+            min-width: 60px;
+            text-align: center;
+        }
+        .get { background-color: #61affe; color: white; }
+        .post { background-color: #49cc90; color: white; }
+        .delete { background-color: #f93e3e; color: white; }
+        .put { background-color: #fca130; color: white; }
+        
+        .path {
+            font-family: monospace;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        
+        .endpoint-body {
+            padding: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        
+        .description {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .try-btn {
+            background: transparent;
+            border: 1px solid var(--text-secondary);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 1rem;
+        }
+        .try-btn:hover {
+            background: var(--text-secondary);
+            color: var(--bg-color);
+        }
+
+        .response-area {
+            background: #1e293b;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #a5b4fc;
+            white-space: pre-wrap;
+            display: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="/ZMTECH" class="logo">ZMTECH</a>
+
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-group">
+                <h4>Book Store Application</h4>
+                <a href="/login" class="nav-item">Login</a>
+                <a href="/books" class="nav-item">Book Store</a>
+                <a href="/profile" class="nav-item">Profile</a>
+                <a href="/books-api" class="nav-item active">Book Store API</a>
+            </div>
+            <div class="sidebar-group">
+                <h4>Elements</h4>
+                <a href="/elements" class="nav-item">Elements</a>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <div class="content-header">
+                <h2>Book Store API</h2>
+            </div>
+
+            <div class="api-container">
+                
+                <!-- POST User -->
+                <div class="api-endpoint">
+                    <div class="endpoint-header" onclick="toggleEndpoint(this)">
+                        <span class="method post">POST</span> <span class="path">/Account/v1/User</span>
+                    </div>
+                    <div class="endpoint-body">
+                        <div class="description">Creates a new user.</div>
+                        <button class="try-btn" onclick="executeRequest('createUser', this)">Try it out</button>
+                        <div class="response-area"></div>
+                    </div>
+                </div>
+
+                <!-- POST Generate Token -->
+                <div class="api-endpoint">
+                    <div class="endpoint-header" onclick="toggleEndpoint(this)">
+                        <span class="method post">POST</span> <span class="path">/Account/v1/GenerateToken</span>
+                    </div>
+                    <div class="endpoint-body">
+                        <div class="description">Generates a token for authorization.</div>
+                        <button class="try-btn" onclick="executeRequest('generateToken', this)">Try it out</button>
+                        <div class="response-area"></div>
+                    </div>
+                </div>
+
+                <!-- GET Books -->
+                <div class="api-endpoint">
+                    <div class="endpoint-header" onclick="toggleEndpoint(this)">
+                        <span class="method get">GET</span> <span class="path">/BookStore/v1/Books</span>
+                    </div>
+                    <div class="endpoint-body">
+                        <div class="description">Returns a list of books.</div>
+                        <button class="try-btn" onclick="executeRequest('getBooks', this)">Try it out</button>
+                        <div class="response-area"></div>
+                    </div>
+                </div>
+
+                <!-- POST Books -->
+                <div class="api-endpoint">
+                    <div class="endpoint-header" onclick="toggleEndpoint(this)">
+                        <span class="method post">POST</span> <span class="path">/BookStore/v1/Books</span>
+                    </div>
+                    <div class="endpoint-body">
+                        <div class="description">Adds a list of books to the user's collection.</div>
+                        <button class="try-btn" onclick="executeRequest('addBooks', this)">Try it out</button>
+                        <div class="response-area"></div>
+                    </div>
+                </div>
+
+                <!-- DELETE Book -->
+                <div class="api-endpoint">
+                    <div class="endpoint-header" onclick="toggleEndpoint(this)">
+                        <span class="method delete">DELETE</span> <span class="path">/BookStore/v1/Book</span>
+                    </div>
+                    <div class="endpoint-body">
+                        <div class="description">Removes a book from the user's collection.</div>
+                        <button class="try-btn" onclick="executeRequest('deleteBook', this)">Try it out</button>
+                        <div class="response-area"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleEndpoint(header) {
+            const body = header.nextElementSibling;
+            if (body.style.display === 'block') {
+                body.style.display = 'none';
+            } else {
+                body.style.display = 'block';
+            }
+        }
+
+        function executeRequest(type, btn) {
+            const responseArea = btn.nextElementSibling;
+            responseArea.style.display = 'block';
+            responseArea.textContent = 'Loading...';
+
+            setTimeout(() => {
+                let response = {};
+                switch(type) {
+                    case 'createUser':
+                        response = {
+                            "userID": "12345-67890-abcde",
+                            "username": "testuser",
+                            "books": []
+                        };
+                        break;
+                    case 'generateToken':
+                        response = {
+                            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNj...",
+                            "expires": "2025-11-22T15:00:00.000Z",
+                            "status": "Success",
+                            "result": "User authorized successfully."
+                        };
+                        break;
+                    case 'getBooks':
+                        response = {
+                            "books": [
+                                {
+                                    "isbn": "9781449325862",
+                                    "title": "Git Pocket Guide",
+                                    "subTitle": "A Working Introduction",
+                                    "author": "Richard E. Silverman",
+                                    "publish_date": "2020-06-04T08:48:39.000Z",
+                                    "publisher": "O'Reilly Media",
+                                    "pages": 234,
+                                    "description": "This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for experienced users.",
+                                    "website": "http://chimera.labs.oreilly.com/books/1230000000561/index.html"
+                                },
+                                {
+                                    "isbn": "9781449331818",
+                                    "title": "Learning JavaScript Design Patterns",
+                                    "subTitle": "A JavaScript and jQuery Developer's Guide",
+                                    "author": "Addy Osmani",
+                                    "publish_date": "2020-06-04T09:11:40.000Z",
+                                    "publisher": "O'Reilly Media",
+                                    "pages": 254,
+                                    "description": "With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-date with the latest best practices, this book is for you.",
+                                    "website": "http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"
+                                }
+                            ]
+                        };
+                        break;
+                    case 'addBooks':
+                        response = {
+                            "books": [
+                                { "isbn": "9781449325862" }
+                            ]
+                        };
+                        break;
+                    case 'deleteBook':
+                        response = {
+                            "userId": "12345-67890-abcde",
+                            "message": "Book deleted successfully!"
+                        };
+                        break;
+                }
+                responseArea.textContent = JSON.stringify(response, null, 4);
+            }, 800);
+        }
+    </script>
+</body>
+</html>
+

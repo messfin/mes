@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZMTECH | Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/elements-style.css">
+    <link rel="stylesheet" href="css/forms-style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="/ZMTECH" class="logo">ZMTECH</a>
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-group">
+                <h4>Forms</h4>
+                <a href="#practice-form" class="nav-item active">Practice Form</a>
+            </div>
+            <div class="sidebar-group">
+                <h4>Elements</h4>
+                <a href="/elements" class="nav-item">Elements</a>
+            </div>
+            <div class="sidebar-group">
+                <h4>Book Store Application</h4>
+                <a href="/login" class="nav-item">Login</a>
+                <a href="/books" class="nav-item">Book Store</a>
+                <a href="/profile" class="nav-item">Profile</a>
+                <a href="/books-api" class="nav-item">Book Store API</a>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <div class="content-header">
+                <h2>Practice Form</h2>
+            </div>
+
+            <form id="practiceForm" class="practice-form">
+                
+                <!-- Name -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="Male" required> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                            <label><input type="radio" name="gender" value="Other"> Other</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mobile">Mobile *</label>
+                        <input type="text" id="mobile" name="mobile" placeholder="1234567890" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth *</label>
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                    </div>
+                </div>
+
+                <!-- Subjects -->
+                <div class="form-row single">
+                    <div class="form-group">
+                        <label for="subjects">Subjects</label>
+                        <input type="text" id="subjects" name="subjects" placeholder="Maths, Physics, Chemistry">
+                    </div>
+                </div>
+
+                <!-- Hobbies -->
+                <div class="form-row single">
+                    <div class="form-group">
+                        <label>Hobbies</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="hobbies" value="Sports"> Sports</label>
+                            <label><input type="checkbox" name="hobbies" value="Reading"> Reading</label>
+                            <label><input type="checkbox" name="hobbies" value="Music"> Music</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Picture -->
+                <div class="form-row single">
+                    <div class="form-group">
+                        <label for="picture">Picture</label>
+                        <div class="file-upload-wrapper">
+                            <label for="picture" class="file-upload-label">Choose File</label>
+                            <input type="file" id="picture" name="picture" accept="image/*">
+                            <div id="fileName" class="file-name">No file chosen</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Address -->
+                <div class="form-row single">
+                    <div class="form-group">
+                        <label for="currentAddress">Current Address</label>
+                        <textarea id="currentAddress" name="currentAddress" placeholder="Enter your address"></textarea>
+                    </div>
+                </div>
+
+                <!-- State and City -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <select id="state" name="state">
+                            <option value="">Select State</option>
+                            <option value="NCR">NCR</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <select id="city" name="city">
+                            <option value="">Select City</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Gurgaon">Gurgaon</option>
+                            <option value="Noida">Noida</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="submit-btn-container">
+                    <button type="submit" class="primary-btn">Submit</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="success-modal">
+        <div class="success-modal-content">
+            <h3>Thanks for submitting the form</h3>
+            <table class="success-table">
+                <tr>
+                    <td>Student Name</td>
+                    <td id="modalStudentName"></td>
+                </tr>
+                <tr>
+                    <td>Student Email</td>
+                    <td id="modalEmail"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td id="modalGender"></td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td id="modalMobile"></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td id="modalDOB"></td>
+                </tr>
+                <tr>
+                    <td>Subjects</td>
+                    <td id="modalSubjects"></td>
+                </tr>
+                <tr>
+                    <td>Hobbies</td>
+                    <td id="modalHobbies"></td>
+                </tr>
+                <tr>
+                    <td>Picture</td>
+                    <td id="modalPicture"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td id="modalAddress"></td>
+                </tr>
+                <tr>
+                    <td>State and City</td>
+                    <td id="modalStateCity"></td>
+                </tr>
+            </table>
+            <button id="closeModal" class="primary-btn modal-close-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="js/forms-script.js></script>
+</body>
+</html>
+

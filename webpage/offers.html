@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenKart - Top Deals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/offers-style.css">
+</head>
+<body>
+
+    <header>
+        <h1>GreenKart</h1>
+        <p class="subtitle">Exclusive Top Deals & Offers</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="page-size">Show</label>
+                <select id="page-size">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                </select>
+                <label>entries</label>
+            </div>
+
+            <div class="control-group">
+                <input type="text" id="search-input" placeholder="Search offers...">
+            </div>
+
+            <div class="control-group">
+                <input type="date" id="delivery-date">
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th data-sort="name">Veg/fruit name <span>↕</span></th>
+                        <th data-sort="price">Price <span>↕</span></th>
+                        <th data-sort="discount">Discount Price <span>↕</span></th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Rows will be populated by JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="pagination" class="pagination">
+            <!-- Pagination buttons will be populated by JS -->
+        </div>
+
+    </div>
+
+    <script src="js/offers-script.js"></script>
+</body>
+</html>
+

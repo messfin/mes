@@ -1,0 +1,460 @@
+
+Running 28 tests using 4 workers
+
+  Γ£ô   1 [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:7:6 ΓÇ║ authenticate as admin (3.7s)
+  Γ£ô   5 [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:17:6 ΓÇ║ authenticate as user (2.3s)
+  Γ£ÿ   3 [chromium] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book (6.7s)
+  Γ£ÿ   2 [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:45:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book (6.7s)
+  Γ£ô   8 [chromium] ΓÇ║ tests\ui\specs\profile-stored-authentication.spec.ts:13:9 ΓÇ║ Profile - Stored Auth ΓÇ║ Check logged in (1.1s)
+  Γ£ô   6 [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:20:7 ΓÇ║ Book Store - Login ΓÇ║ successfull login (3.1s)
+  -  10 [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:25:8 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid username
+  -  11 [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:31:8 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid password
+  -  12 [chromium] ΓÇ║ tests\ui\specs\visual-regression.spec.ts:63:9 ΓÇ║ Visual Regression ΓÇ║ Profile Page and Swagger Page
+  Γ£ô   9 [chromium] ΓÇ║ tests\ui\specs\profile-with-dynamic-pom.spec.ts:15:9 ΓÇ║ Profile - Dynamic Page Object Model ΓÇ║ Check logged in (780ms)
+  Γ£ô  13 [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-admin.spec.ts:15:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ Sort books - admin (802ms)
+  Γ£ô  15 [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-user.spec.ts:15:9 ΓÇ║ Book Store Application - Profile ΓÇ║ Sort books - user (725ms)
+  Γ£ÿ   7 [chromium] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books (6.7s)
+  Γ£ÿ  14 [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user (6.1s)
+  Γ£ÿ   4 [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:9 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book (31.1s)
+  Γ£ô  18 [chromium-auth] ΓÇ║ tests\ui\specs\login.spec.ts:20:7 ΓÇ║ Book Store - Login ΓÇ║ successfull login (3.5s)
+  -  20 [chromium-auth] ΓÇ║ tests\ui\specs\login.spec.ts:25:8 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid username
+  -  21 [chromium-auth] ΓÇ║ tests\ui\specs\login.spec.ts:31:8 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid password
+  Γ£ÿ  17 [chromium-auth] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book (6.5s)
+  Γ£ÿ  16 [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:45:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book (6.7s)
+  Γ£ô  23 [chromium-auth] ΓÇ║ tests\ui\specs\profile-stored-authentication.spec.ts:13:9 ΓÇ║ Profile - Stored Auth ΓÇ║ Check logged in (1.1s)
+  -  25 [chromium-auth] ΓÇ║ tests\ui\specs\visual-regression.spec.ts:63:9 ΓÇ║ Visual Regression ΓÇ║ Profile Page and Swagger Page
+  Γ£ô  24 [chromium-auth] ΓÇ║ tests\ui\specs\profile-with-dynamic-pom.spec.ts:15:9 ΓÇ║ Profile - Dynamic Page Object Model ΓÇ║ Check logged in (1.3s)
+  Γ£ÿ  22 [chromium-auth] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books (6.1s)
+  Γ£ô  26 [chromium-auth] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-admin.spec.ts:15:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ Sort books - admin (1.4s)
+  Γ£ô  28 [chromium-auth] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-user.spec.ts:15:9 ΓÇ║ Book Store Application - Profile ΓÇ║ Sort books - user (714ms)
+  Γ£ÿ  27 [chromium-auth] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user (6.0s)
+  Γ£ÿ  19 [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:9 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book (31.2s)
+
+
+  1) [chromium] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText('9781449365035', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText('9781449365035', { exact: true })[22m
+
+
+       at tests\ui\pages\book-page.ts:45
+
+      43 |
+      44 |   async checkSpeakingJSIsbn() {
+    > 45 |     await expect (this.speakingJSBookIsbnLabel).toBeVisible();
+         |                                                 ^
+      46 |   }
+      47 |
+      48 |   async checkTitle(title: string) {
+        at BookPage.checkSpeakingJSIsbn (D:\mestest\tests\ui\pages\book-page.ts:45:49)
+        at D:\mestest\tests\ui\specs\book-with-dynamic-pom.spec.ts:15:24
+
+    Error Context: test-results\tests-ui-specs-book-with-d-cdcd4-ct-Model-Add-brand-new-book-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-d-cdcd4-ct-Model-Add-brand-new-book-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-d-cdcd4-ct-Model-Add-brand-new-book-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  2) [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:45:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Expected pattern: [32m/.*profile/[39m
+    Received string:  [31m"http://localhost:3000/login"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toHaveURL" with timeout 5000ms[22m
+    [2m    9 ├ù unexpected value "http://localhost:3000/login"[22m
+
+
+       at tests\ui\pages\login-page.ts:37
+
+      35 |
+      36 |   async checkLoggedIn() {
+    > 37 |     await expect(this.page).toHaveURL(/.*profile/);
+         |                             ^
+      38 |     await expect(this.page).toHaveTitle(/ZMTECH/);
+      39 |   }
+      40 |
+        at LoginPage.checkLoggedIn (D:\mestest\tests\ui\pages\login-page.ts:37:29)
+        at D:\mestest\tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:39:19
+
+    Error Context: test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  3) [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:9 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book 
+
+    Error: Invalid request! Failed on 'executeRequest' method. 
+     Request url: http://localhost:3000/books-api/BookStore/v1/Books?UserId=your_user_id_here 
+     Method: delete 
+     Request options: {} 
+     Code: 404 
+     Response: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot DELETE /books-api/BookStore/v1/Books</pre>
+    </body>
+    </html>
+     
+     Status: false 
+     
+
+       at tests\utils\apiRequestUtils.ts:29
+
+      27 |     const errorRequestOptions = `Request options: ${JSON.stringify(requestOptions)} \r\n`;
+      28 |
+    > 29 |     throw new Error(
+         |           ^
+      30 |       `Invalid request! Failed on \'executeRequest\' method. \r\n ${errorRequestUrl} ${errorRequestMethod} ${errorRequestOptions} ${error}`
+      31 |     );
+      32 |   }
+        at executeRequest (D:\mestest\tests\utils\apiRequestUtils.ts:29:11)
+        at Object.deleteAllBooksByUser (D:\mestest\tests\api\requests\delete-books-collection.ts:11:20)
+        at cleanBooks (D:\mestest\tests\ui\specs\book-with-fixture-and-api.spec.ts:42:5)
+        at D:\mestest\tests\ui\specs\book-with-fixture-and-api.spec.ts:36:9
+
+    [31mTearing down "bookPage" exceeded the test timeout of 30000ms.[39m
+
+    Error: locator.click: Test ended.
+    Call log:
+    [2m  - waiting for getByText('Add To Your Collection', { exact: true })[22m
+
+
+       at tests\ui\pages\book-page.ts:41
+
+      39 |         });
+      40 |     }
+    > 41 |     await this.addToYourCollectionButton.click();
+         |                                          ^
+      42 |   }
+      43 |
+      44 |   async checkSpeakingJSIsbn() {
+        at BookPage.addToYourCollection (D:\mestest\tests\ui\pages\book-page.ts:41:42)
+        at Object.bookPage (D:\mestest\tests\ui\fixtures\books-fixture.ts:23:20)
+
+    Error Context: test-results\tests-ui-specs-book-with-f-3eb07-ture-API-Add-brand-new-book-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-f-3eb07-ture-API-Add-brand-new-book-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-f-3eb07-ture-API-Add-brand-new-book-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  4) [chromium] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByRole('link', { name: 'Designing Evolvable Web APIs with ASP.NET' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('link', { name: 'Designing Evolvable Web APIs with ASP.NET' })[22m
+
+
+       at tests\ui\pages\profile-page.ts:37
+
+      35 |   async checkBooksList() {
+      36 |     for (const book of bookListData.books){
+    > 37 |       await expect(this.page.getByRole('link', { name: book.title })).toBeVisible();
+         |                                                                       ^
+      38 |     }
+      39 |   }
+      40 |
+        at SearchPage.checkBooksList (D:\mestest\tests\ui\pages\profile-page.ts:37:71)
+        at D:\mestest\tests\ui\specs\profile-api-interception.spec.ts:16:27
+
+    Error Context: test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  5) [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText('Eloquent JavaScript, Second Edition')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText('Eloquent JavaScript, Second Edition')[22m
+
+
+       at tests\ui\pages\profile-page.ts:57
+
+      55 |   async checkLoggedInAdmin() {
+      56 |     await expect(this.notLoggedInLabel).not.toBeVisible();
+    > 57 |     await expect(this.bookAdminLabel).toBeVisible();
+         |                                       ^
+      58 |   }
+      59 |
+      60 |   async checkSort() {
+        at SearchPage.checkLoggedInAdmin (D:\mestest\tests\ui\pages\profile-page.ts:57:39)
+        at D:\mestest\tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:16:9
+
+    Error Context: test-results\tests-ui-specs-auth-profil-b35c6-file---Admin-admin-and-user-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-auth-profil-b35c6-file---Admin-admin-and-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-auth-profil-b35c6-file---Admin-admin-and-user-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  6) [chromium-auth] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText('9781449365035', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText('9781449365035', { exact: true })[22m
+
+
+       at tests\ui\pages\book-page.ts:45
+
+      43 |
+      44 |   async checkSpeakingJSIsbn() {
+    > 45 |     await expect (this.speakingJSBookIsbnLabel).toBeVisible();
+         |                                                 ^
+      46 |   }
+      47 |
+      48 |   async checkTitle(title: string) {
+        at BookPage.checkSpeakingJSIsbn (D:\mestest\tests\ui\pages\book-page.ts:45:49)
+        at D:\mestest\tests\ui\specs\book-with-dynamic-pom.spec.ts:15:24
+
+    Error Context: test-results\tests-ui-specs-book-with-d-cdcd4-ct-Model-Add-brand-new-book-chromium-auth\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-d-cdcd4-ct-Model-Add-brand-new-book-chromium-auth\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-d-cdcd4-ct-Model-Add-brand-new-book-chromium-auth\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  7) [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:45:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Expected pattern: [32m/.*profile/[39m
+    Received string:  [31m"http://localhost:3000/login"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toHaveURL" with timeout 5000ms[22m
+    [2m    9 ├ù unexpected value "http://localhost:3000/login"[22m
+
+
+       at tests\ui\pages\login-page.ts:37
+
+      35 |
+      36 |   async checkLoggedIn() {
+    > 37 |     await expect(this.page).toHaveURL(/.*profile/);
+         |                             ^
+      38 |     await expect(this.page).toHaveTitle(/ZMTECH/);
+      39 |   }
+      40 |
+        at LoginPage.checkLoggedIn (D:\mestest\tests\ui\pages\login-page.ts:37:29)
+        at D:\mestest\tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:39:19
+
+    Error Context: test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium-auth\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium-auth\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium-auth\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  8) [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:9 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book 
+
+    Error: Invalid request! Failed on 'executeRequest' method. 
+     Request url: http://localhost:3000/books-api/BookStore/v1/Books?UserId=your_user_id_here 
+     Method: delete 
+     Request options: {} 
+     Code: 404 
+     Response: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot DELETE /books-api/BookStore/v1/Books</pre>
+    </body>
+    </html>
+     
+     Status: false 
+     
+
+       at tests\utils\apiRequestUtils.ts:29
+
+      27 |     const errorRequestOptions = `Request options: ${JSON.stringify(requestOptions)} \r\n`;
+      28 |
+    > 29 |     throw new Error(
+         |           ^
+      30 |       `Invalid request! Failed on \'executeRequest\' method. \r\n ${errorRequestUrl} ${errorRequestMethod} ${errorRequestOptions} ${error}`
+      31 |     );
+      32 |   }
+        at executeRequest (D:\mestest\tests\utils\apiRequestUtils.ts:29:11)
+        at Object.deleteAllBooksByUser (D:\mestest\tests\api\requests\delete-books-collection.ts:11:20)
+        at cleanBooks (D:\mestest\tests\ui\specs\book-with-fixture-and-api.spec.ts:42:5)
+        at D:\mestest\tests\ui\specs\book-with-fixture-and-api.spec.ts:36:9
+
+    [31mTearing down "bookPage" exceeded the test timeout of 30000ms.[39m
+
+    Error: locator.click: Test ended.
+    Call log:
+    [2m  - waiting for getByText('Add To Your Collection', { exact: true })[22m
+
+
+       at tests\ui\pages\book-page.ts:41
+
+      39 |         });
+      40 |     }
+    > 41 |     await this.addToYourCollectionButton.click();
+         |                                          ^
+      42 |   }
+      43 |
+      44 |   async checkSpeakingJSIsbn() {
+        at BookPage.addToYourCollection (D:\mestest\tests\ui\pages\book-page.ts:41:42)
+        at Object.bookPage (D:\mestest\tests\ui\fixtures\books-fixture.ts:23:20)
+
+    Error Context: test-results\tests-ui-specs-book-with-f-3eb07-ture-API-Add-brand-new-book-chromium-auth\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-f-3eb07-ture-API-Add-brand-new-book-chromium-auth\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-f-3eb07-ture-API-Add-brand-new-book-chromium-auth\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  9) [chromium-auth] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByRole('link', { name: 'Designing Evolvable Web APIs with ASP.NET' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('link', { name: 'Designing Evolvable Web APIs with ASP.NET' })[22m
+
+
+       at tests\ui\pages\profile-page.ts:37
+
+      35 |   async checkBooksList() {
+      36 |     for (const book of bookListData.books){
+    > 37 |       await expect(this.page.getByRole('link', { name: book.title })).toBeVisible();
+         |                                                                       ^
+      38 |     }
+      39 |   }
+      40 |
+        at SearchPage.checkBooksList (D:\mestest\tests\ui\pages\profile-page.ts:37:71)
+        at D:\mestest\tests\ui\specs\profile-api-interception.spec.ts:16:27
+
+    Error Context: test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium-auth\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium-auth\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium-auth\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  10) [chromium-auth] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText('Eloquent JavaScript, Second Edition')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText('Eloquent JavaScript, Second Edition')[22m
+
+
+       at tests\ui\pages\profile-page.ts:57
+
+      55 |   async checkLoggedInAdmin() {
+      56 |     await expect(this.notLoggedInLabel).not.toBeVisible();
+    > 57 |     await expect(this.bookAdminLabel).toBeVisible();
+         |                                       ^
+      58 |   }
+      59 |
+      60 |   async checkSort() {
+        at SearchPage.checkLoggedInAdmin (D:\mestest\tests\ui\pages\profile-page.ts:57:39)
+        at D:\mestest\tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:16:9
+
+    Error Context: test-results\tests-ui-specs-auth-profil-b35c6-file---Admin-admin-and-user-chromium-auth\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-auth-profil-b35c6-file---Admin-admin-and-user-chromium-auth\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-auth-profil-b35c6-file---Admin-admin-and-user-chromium-auth\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  10 failed
+    [chromium] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book 
+    [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:45:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+    [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:9 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book 
+    [chromium] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books 
+    [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user 
+    [chromium-auth] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book 
+    [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:45:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+    [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:9 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book 
+    [chromium-auth] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books 
+    [chromium-auth] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user 
+  6 skipped
+  12 passed (1.2m)

@@ -1,0 +1,34 @@
+
+Running 28 tests using 4 workers
+
+  -   1 [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:45:8 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book
+  -   2 [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:10 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book
+  -   3 [chromium] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:10 ΓÇ║ Profile - API Interception ΓÇ║ Sort books
+  Γ£ô   5 [chromium] ΓÇ║ tests\ui\specs\profile-stored-authentication.spec.ts:13:9 ΓÇ║ Profile - Stored Auth ΓÇ║ Check logged in (2.2s)
+  Γ£ô   4 [chromium] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book (2.5s)
+  -   9 [chromium] ΓÇ║ tests\ui\specs\visual-regression.spec.ts:63:9 ΓÇ║ Visual Regression ΓÇ║ Profile Page and Swagger Page
+  Γ£ô  10 [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-admin.spec.ts:15:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ Sort books - admin (994ms)
+  Γ£ô   8 [chromium] ΓÇ║ tests\ui\specs\profile-with-dynamic-pom.spec.ts:15:9 ΓÇ║ Profile - Dynamic Page Object Model ΓÇ║ Check logged in (992ms)
+  Γ£ô   6 [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:7:6 ΓÇ║ authenticate as admin (4.3s)
+  Γ£ô   7 [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:20:7 ΓÇ║ Book Store - Login ΓÇ║ successfull login (4.3s)
+  -  14 [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:25:8 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid username
+  -  15 [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:31:8 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid password
+  Γ£ô  12 [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-user.spec.ts:15:9 ΓÇ║ Book Store Application - Profile ΓÇ║ Sort books - user (1.8s)
+  Γ£ô  11 [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user (3.2s)
+  Γ£ô  13 [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:17:6 ΓÇ║ authenticate as user (2.9s)
+  -  16 [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:45:8 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book
+  -  17 [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:10 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book
+  -  18 [chromium-auth] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:10 ΓÇ║ Profile - API Interception ΓÇ║ Sort books
+  Γ£ô  22 [chromium-auth] ΓÇ║ tests\ui\specs\profile-with-dynamic-pom.spec.ts:15:9 ΓÇ║ Profile - Dynamic Page Object Model ΓÇ║ Check logged in (1.9s)
+  -  23 [chromium-auth] ΓÇ║ tests\ui\specs\visual-regression.spec.ts:63:9 ΓÇ║ Visual Regression ΓÇ║ Profile Page and Swagger Page
+  Γ£ô  20 [chromium-auth] ΓÇ║ tests\ui\specs\profile-stored-authentication.spec.ts:13:9 ΓÇ║ Profile - Stored Auth ΓÇ║ Check logged in (2.0s)
+  Γ£ô  21 [chromium-auth] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book (2.2s)
+  Γ£ô  24 [chromium-auth] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-admin.spec.ts:15:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ Sort books - admin (1.3s)
+  Γ£ô  26 [chromium-auth] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-user.spec.ts:15:9 ΓÇ║ Book Store Application - Profile ΓÇ║ Sort books - user (1.5s)
+  Γ£ô  19 [chromium-auth] ΓÇ║ tests\ui\specs\login.spec.ts:20:7 ΓÇ║ Book Store - Login ΓÇ║ successfull login (4.4s)
+  -  27 [chromium-auth] ΓÇ║ tests\ui\specs\login.spec.ts:25:8 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid username
+  -  28 [chromium-auth] ΓÇ║ tests\ui\specs\login.spec.ts:31:8 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid password
+  Γ£ô  25 [chromium-auth] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user (2.9s)
+
+  12 skipped
+  16 passed (23.6s)

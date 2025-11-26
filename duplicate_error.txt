@@ -1,0 +1,113 @@
+
+Running 4 tests using 2 workers
+
+  Γ£ô  1 [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:7:6 ΓÇ║ authenticate as admin (3.4s)
+  Γ£ô  3 [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:17:6 ΓÇ║ authenticate as user (2.7s)
+  Γ£ÿ  2 [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:46:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book (9.5s)
+  Γ£ÿ  4 [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:46:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book (9.0s)
+
+
+  1) [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:46:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"Book a[7mlready present in the[27m your collection!"[39m
+    Received: [31m"Book a[7mdded to[27m your collection!"[39m
+
+       at tests\ui\pages\book-page.ts:37
+
+      35 |       this.page.on('dialog', async (dialog) => {
+      36 |           dialogMessage = dialog.message();
+    > 37 |           expect(dialogMessage).toBe(messages.book.duplicate);
+         |                                 ^
+      38 |           await dialog.accept();
+      39 |         });
+      40 |     }
+        at Page.<anonymous> (D:\mestest\tests\ui\pages\book-page.ts:37:33)
+
+    Error: locator.click: Test ended.
+    Call log:
+    [2m  - waiting for getByText('Add To Your Collection', { exact: true })[22m
+    [2m    - locator resolved to <button class="primary-btn" id="add-to-collection-btn">Add To Your Collection</button>[22m
+    [2m  - attempting click action[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is visible, enabled and stable[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+    [2m    - performing click action[22m
+
+
+       at tests\ui\pages\book-page.ts:41
+
+      39 |         });
+      40 |     }
+    > 41 |     await this.addToYourCollectionButton.click();
+         |                                          ^
+      42 |   }
+      43 |
+      44 |   async checkSpeakingJSIsbn() {
+        at BookPage.addToYourCollection (D:\mestest\tests\ui\pages\book-page.ts:41:42)
+        at Object.bookPage (D:\mestest\tests\ui\fixtures\books-fixture.ts:23:20)
+
+    attachment #1: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  2) [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:46:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"Book a[7mlready present in the[27m your collection!"[39m
+    Received: [31m"Book a[7mdded to[27m your collection!"[39m
+
+       at tests\ui\pages\book-page.ts:37
+
+      35 |       this.page.on('dialog', async (dialog) => {
+      36 |           dialogMessage = dialog.message();
+    > 37 |           expect(dialogMessage).toBe(messages.book.duplicate);
+         |                                 ^
+      38 |           await dialog.accept();
+      39 |         });
+      40 |     }
+        at Page.<anonymous> (D:\mestest\tests\ui\pages\book-page.ts:37:33)
+
+    Error: locator.click: Test ended.
+    Call log:
+    [2m  - waiting for getByText('Add To Your Collection', { exact: true })[22m
+    [2m    - locator resolved to <button class="primary-btn" id="add-to-collection-btn">Add To Your Collection</button>[22m
+    [2m  - attempting click action[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is visible, enabled and stable[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+    [2m    - performing click action[22m
+
+
+       at tests\ui\pages\book-page.ts:41
+
+      39 |         });
+      40 |     }
+    > 41 |     await this.addToYourCollectionButton.click();
+         |                                          ^
+      42 |   }
+      43 |
+      44 |   async checkSpeakingJSIsbn() {
+        at BookPage.addToYourCollection (D:\mestest\tests\ui\pages\book-page.ts:41:42)
+        at Object.bookPage (D:\mestest\tests\ui\fixtures\books-fixture.ts:23:20)
+
+    attachment #1: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium-auth\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium-auth\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  2 failed
+    [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:46:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+    [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:46:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+  2 passed (27.9s)

@@ -1,0 +1,502 @@
+
+Running 28 tests using 4 workers
+
+  Γ£ÿ   1 [chromium] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book (7.0s)
+  Γ£ÿ   2 [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:7:6 ΓÇ║ authenticate as admin (7.3s)
+  Γ£ÿ   3 [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:45:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book (7.2s)
+  Γ£ÿ   5 [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:20:7 ΓÇ║ Book Store - Login ΓÇ║ successfull login (6.4s)
+  -   8 [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:25:7 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid username
+  -   9 [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:31:7 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid password
+  Γ£ÿ   6 [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:17:6 ΓÇ║ authenticate as user (6.6s)
+  Γ£ÿ   4 [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:9 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book (31.6s)
+  -  12 [chromium] ΓÇ║ tests\ui\specs\visual-regression.spec.ts:63:9 ΓÇ║ Visual Regression ΓÇ║ Profile Page and Swagger Page
+  Γ£ÿ   7 [chromium] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books (31.4s)
+  Γ£ÿ  10 [chromium] ΓÇ║ tests\ui\specs\profile-stored-authentication.spec.ts:13:9 ΓÇ║ Profile - Stored Auth ΓÇ║ Check logged in (31.5s)
+  Γ£ÿ  11 [chromium] ΓÇ║ tests\ui\specs\profile-with-dynamic-pom.spec.ts:15:9 ΓÇ║ Profile - Dynamic Page Object Model ΓÇ║ Check logged in (31.4s)
+  Γ£ÿ  13 [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-admin.spec.ts:15:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ Sort books - admin (30.5s)
+  Γ£ÿ  14 [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user (30.6s)
+  Γ£ÿ  15 [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-user.spec.ts:15:9 ΓÇ║ Book Store Application - Profile ΓÇ║ Sort books - user (30.7s)
+
+
+  1) [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:7:6 ΓÇ║ authenticate as admin ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Expected pattern: [32m/.*profile/[39m
+    Received string:  [31m"http://localhost:3000/login"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toHaveURL" with timeout 5000ms[22m
+    [2m    9 ├ù unexpected value "http://localhost:3000/login"[22m
+
+
+       at tests\ui\pages\login-page.ts:37
+
+      35 |
+      36 |   async checkLoggedIn() {
+    > 37 |     await expect(this.page).toHaveURL(/.*profile/);
+         |                             ^
+      38 |     await expect(this.page).toHaveTitle(/ZMTECH/);
+      39 |   }
+      40 |
+        at LoginPage.checkLoggedIn (D:\mestest\tests\ui\pages\login-page.ts:37:29)
+        at doLogin (D:\mestest\tests\setup\auth-setup.ts:31:21)
+        at D:\mestest\tests\setup\auth-setup.ts:10:3
+
+    Error Context: test-results\tests-setup-auth-setup.ts-authenticate-as-admin-auth-setup\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-setup-auth-setup.ts-authenticate-as-admin-auth-setup\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-setup-auth-setup.ts-authenticate-as-admin-auth-setup\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  2) [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:17:6 ΓÇ║ authenticate as user ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Expected pattern: [32m/.*profile/[39m
+    Received string:  [31m"http://localhost:3000/login"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toHaveURL" with timeout 5000ms[22m
+    [2m    9 ├ù unexpected value "http://localhost:3000/login"[22m
+
+
+       at tests\ui\pages\login-page.ts:37
+
+      35 |
+      36 |   async checkLoggedIn() {
+    > 37 |     await expect(this.page).toHaveURL(/.*profile/);
+         |                             ^
+      38 |     await expect(this.page).toHaveTitle(/ZMTECH/);
+      39 |   }
+      40 |
+        at LoginPage.checkLoggedIn (D:\mestest\tests\ui\pages\login-page.ts:37:29)
+        at doLogin (D:\mestest\tests\setup\auth-setup.ts:31:21)
+        at D:\mestest\tests\setup\auth-setup.ts:20:5
+
+    Error Context: test-results\tests-setup-auth-setup.ts-authenticate-as-user-auth-setup\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-setup-auth-setup.ts-authenticate-as-user-auth-setup\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-setup-auth-setup.ts-authenticate-as-user-auth-setup\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  3) [chromium] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText('9781449365035', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText('9781449365035', { exact: true })[22m
+
+
+       at tests\ui\pages\book-page.ts:45
+
+      43 |
+      44 |   async checkSpeakingJSIsbn() {
+    > 45 |     await expect (this.speakingJSBookIsbnLabel).toBeVisible();
+         |                                                 ^
+      46 |   }
+      47 |
+      48 |   async checkTitle(title: string) {
+        at BookPage.checkSpeakingJSIsbn (D:\mestest\tests\ui\pages\book-page.ts:45:49)
+        at D:\mestest\tests\ui\specs\book-with-dynamic-pom.spec.ts:15:24
+
+    Error Context: test-results\tests-ui-specs-book-with-d-cdcd4-ct-Model-Add-brand-new-book-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-d-cdcd4-ct-Model-Add-brand-new-book-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-d-cdcd4-ct-Model-Add-brand-new-book-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  4) [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:45:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Expected pattern: [32m/.*profile/[39m
+    Received string:  [31m"http://localhost:3000/login"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toHaveURL" with timeout 5000ms[22m
+    [2m    9 ├ù unexpected value "http://localhost:3000/login"[22m
+
+
+       at tests\ui\pages\login-page.ts:37
+
+      35 |
+      36 |   async checkLoggedIn() {
+    > 37 |     await expect(this.page).toHaveURL(/.*profile/);
+         |                             ^
+      38 |     await expect(this.page).toHaveTitle(/ZMTECH/);
+      39 |   }
+      40 |
+        at LoginPage.checkLoggedIn (D:\mestest\tests\ui\pages\login-page.ts:37:29)
+        at D:\mestest\tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:39:19
+
+    Error Context: test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  5) [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:9 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book 
+
+    Error: Invalid request! Failed on 'executeRequest' method. 
+     Request url: http://localhost:3000/books-api/BookStore/v1/Books?UserId=your_user_id_here 
+     Method: delete 
+     Request options: {} 
+     Code: 404 
+     Response: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot DELETE /books-api/BookStore/v1/Books</pre>
+    </body>
+    </html>
+     
+     Status: false 
+     
+
+       at tests\utils\apiRequestUtils.ts:29
+
+      27 |     const errorRequestOptions = `Request options: ${JSON.stringify(requestOptions)} \r\n`;
+      28 |
+    > 29 |     throw new Error(
+         |           ^
+      30 |       `Invalid request! Failed on \'executeRequest\' method. \r\n ${errorRequestUrl} ${errorRequestMethod} ${errorRequestOptions} ${error}`
+      31 |     );
+      32 |   }
+        at executeRequest (D:\mestest\tests\utils\apiRequestUtils.ts:29:11)
+        at Object.deleteAllBooksByUser (D:\mestest\tests\api\requests\delete-books-collection.ts:11:20)
+        at cleanBooks (D:\mestest\tests\ui\specs\book-with-fixture-and-api.spec.ts:42:5)
+        at D:\mestest\tests\ui\specs\book-with-fixture-and-api.spec.ts:36:9
+
+    [31mTearing down "bookPage" exceeded the test timeout of 30000ms.[39m
+
+    Error: locator.click: Test ended.
+    Call log:
+    [2m  - waiting for getByText('Add To Your Collection', { exact: true })[22m
+
+
+       at tests\ui\pages\book-page.ts:41
+
+      39 |         });
+      40 |     }
+    > 41 |     await this.addToYourCollectionButton.click();
+         |                                          ^
+      42 |   }
+      43 |
+      44 |   async checkSpeakingJSIsbn() {
+        at BookPage.addToYourCollection (D:\mestest\tests\ui\pages\book-page.ts:41:42)
+        at Object.bookPage (D:\mestest\tests\ui\fixtures\books-fixture.ts:23:20)
+
+    Error Context: test-results\tests-ui-specs-book-with-f-3eb07-ture-API-Add-brand-new-book-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-f-3eb07-ture-API-Add-brand-new-book-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-f-3eb07-ture-API-Add-brand-new-book-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  6) [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:20:7 ΓÇ║ Book Store - Login ΓÇ║ successfull login ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Expected pattern: [32m/.*profile/[39m
+    Received string:  [31m"http://localhost:3000/login"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toHaveURL" with timeout 5000ms[22m
+    [2m    9 ├ù unexpected value "http://localhost:3000/login"[22m
+
+
+       at tests\ui\pages\login-page.ts:37
+
+      35 |
+      36 |   async checkLoggedIn() {
+    > 37 |     await expect(this.page).toHaveURL(/.*profile/);
+         |                             ^
+      38 |     await expect(this.page).toHaveTitle(/ZMTECH/);
+      39 |   }
+      40 |
+        at LoginPage.checkLoggedIn (D:\mestest\tests\ui\pages\login-page.ts:37:29)
+        at D:\mestest\tests\ui\specs\login.spec.ts:22:21
+
+    Error Context: test-results\tests-ui-specs-login-Book-Store---Login-successfull-login-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-login-Book-Store---Login-successfull-login-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-login-Book-Store---Login-successfull-login-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  7) [chromium] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+       6 | let profilePage: ProfilePage;
+       7 |
+    >  8 | test.beforeEach(async ({ page }) => {
+         |      ^
+       9 |     await page.goto(pages.profile, { waitUntil: 'networkidle', timeout: 60000 });
+      10 |     profilePage = new ProfilePage(page);
+      11 | });
+        at D:\mestest\tests\ui\specs\profile-api-interception.spec.ts:8:6
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:3000/profile", waiting until "networkidle"[22m
+
+
+       7 |
+       8 | test.beforeEach(async ({ page }) => {
+    >  9 |     await page.goto(pages.profile, { waitUntil: 'networkidle', timeout: 60000 });
+         |                ^
+      10 |     profilePage = new ProfilePage(page);
+      11 | });
+      12 |
+        at D:\mestest\tests\ui\specs\profile-api-interception.spec.ts:9:16
+
+    Error Context: test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  8) [chromium] ΓÇ║ tests\ui\specs\profile-stored-authentication.spec.ts:13:9 ΓÇ║ Profile - Stored Auth ΓÇ║ Check logged in 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+       5 | let profilePage: ProfilePage;
+       6 |
+    >  7 | test.beforeEach(async ({ page }) => {
+         |      ^
+       8 |     await page.goto(pages.profile);
+       9 |     profilePage = new ProfilePage(page);
+      10 | });
+        at D:\mestest\tests\ui\specs\profile-stored-authentication.spec.ts:7:6
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:3000/profile", waiting until "load"[22m
+
+
+       6 |
+       7 | test.beforeEach(async ({ page }) => {
+    >  8 |     await page.goto(pages.profile);
+         |                ^
+       9 |     profilePage = new ProfilePage(page);
+      10 | });
+      11 |
+        at D:\mestest\tests\ui\specs\profile-stored-authentication.spec.ts:8:16
+
+    Error Context: test-results\tests-ui-specs-profile-sto-0ed11-Stored-Auth-Check-logged-in-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-profile-sto-0ed11-Stored-Auth-Check-logged-in-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-profile-sto-0ed11-Stored-Auth-Check-logged-in-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  9) [chromium] ΓÇ║ tests\ui\specs\profile-with-dynamic-pom.spec.ts:15:9 ΓÇ║ Profile - Dynamic Page Object Model ΓÇ║ Check logged in 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+       6 | let profilePage: ProfilePage;
+       7 |
+    >  8 | test.beforeEach(async ({ page }) => {
+         |      ^
+       9 |     // await page.goto(pages.profile);
+      10 |     // profilePage = new ProfilePage(page);
+      11 |     profilePage = await hooks.beforeEach(page, ProfilePage, pages.profile);
+        at D:\mestest\tests\ui\specs\profile-with-dynamic-pom.spec.ts:8:6
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:3000/profile", waiting until "load"[22m
+
+
+       at tests\utils\hooks.ts:13
+
+      11 |   params?: Record<any, any>
+      12 | ) {
+    > 13 |   await page.goto(buildUrl(targetPage, params));
+         |              ^
+      14 |   const pageObject = await new PageObjectParam(page);
+      15 |   return pageObject;
+      16 | }
+        at Object.beforeEach (D:\mestest\tests\utils\hooks.ts:13:14)
+        at D:\mestest\tests\ui\specs\profile-with-dynamic-pom.spec.ts:11:31
+
+    Error Context: test-results\tests-ui-specs-profile-wit-a87cb-bject-Model-Check-logged-in-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-profile-wit-a87cb-bject-Model-Check-logged-in-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-profile-wit-a87cb-bject-Model-Check-logged-in-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  10) [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-admin.spec.ts:15:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ Sort books - admin 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+       7 | test.use({ storageState: '.auth/admin.json' });
+       8 |
+    >  9 | test.beforeEach(async ({ page }) => {
+         |      ^
+      10 |     await page.goto(pages.profile);
+      11 | });
+      12 |
+        at D:\mestest\tests\ui\specs-auth\profile-stored-auth-multi-role-admin.spec.ts:9:6
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:3000/profile", waiting until "load"[22m
+
+
+       8 |
+       9 | test.beforeEach(async ({ page }) => {
+    > 10 |     await page.goto(pages.profile);
+         |                ^
+      11 | });
+      12 |
+      13 | test.describe('Book Store Application - Profile - Admin', () => {
+        at D:\mestest\tests\ui\specs-auth\profile-stored-auth-multi-role-admin.spec.ts:10:16
+
+    Error Context: test-results\tests-ui-specs-auth-profil-c63f6----Admin-Sort-books---admin-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-auth-profil-c63f6----Admin-Sort-books---admin-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-auth-profil-c63f6----Admin-Sort-books---admin-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  11) [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+       5 | let profilePage: ProfilePage;
+       6 |
+    >  7 | test.beforeEach(async ({ page }) => {
+         |      ^
+       8 |     await page.goto(pages.profile);
+       9 | });
+      10 |
+        at D:\mestest\tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:7:6
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:3000/profile", waiting until "load"[22m
+
+
+       6 |
+       7 | test.beforeEach(async ({ page }) => {
+    >  8 |     await page.goto(pages.profile);
+         |                ^
+       9 | });
+      10 |
+      11 | test.describe('Book Store Application - Profile - Admin', () => {
+        at D:\mestest\tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:8:16
+
+    Error Context: test-results\tests-ui-specs-auth-profil-b35c6-file---Admin-admin-and-user-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-auth-profil-b35c6-file---Admin-admin-and-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-auth-profil-b35c6-file---Admin-admin-and-user-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  12) [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-user.spec.ts:15:9 ΓÇ║ Book Store Application - Profile ΓÇ║ Sort books - user 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+       7 | // test.use({ storageState: '.auth/user.json' });
+       8 |
+    >  9 | test.beforeEach(async ({ page }) => {
+         |      ^
+      10 |     await page.goto(pages.profile);
+      11 | });
+      12 |
+        at D:\mestest\tests\ui\specs-auth\profile-stored-auth-multi-role-user.spec.ts:9:6
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:3000/profile", waiting until "load"[22m
+
+
+       8 |
+       9 | test.beforeEach(async ({ page }) => {
+    > 10 |     await page.goto(pages.profile);
+         |                ^
+      11 | });
+      12 |
+      13 | test.describe('Book Store Application - Profile', () => {
+        at D:\mestest\tests\ui\specs-auth\profile-stored-auth-multi-role-user.spec.ts:10:16
+
+    Error Context: test-results\tests-ui-specs-auth-profil-b7cd3---Profile-Sort-books---user-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-auth-profil-b7cd3---Profile-Sort-books---user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-auth-profil-b7cd3---Profile-Sort-books---user-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  12 failed
+    [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:7:6 ΓÇ║ authenticate as admin ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:17:6 ΓÇ║ authenticate as user ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    [chromium] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book 
+    [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:45:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+    [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:9 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book 
+    [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:20:7 ΓÇ║ Book Store - Login ΓÇ║ successfull login ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    [chromium] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books 
+    [chromium] ΓÇ║ tests\ui\specs\profile-stored-authentication.spec.ts:13:9 ΓÇ║ Profile - Stored Auth ΓÇ║ Check logged in 
+    [chromium] ΓÇ║ tests\ui\specs\profile-with-dynamic-pom.spec.ts:15:9 ΓÇ║ Profile - Dynamic Page Object Model ΓÇ║ Check logged in 
+    [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-admin.spec.ts:15:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ Sort books - admin 
+    [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user 
+    [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-user.spec.ts:15:9 ΓÇ║ Book Store Application - Profile ΓÇ║ Sort books - user 
+  1 skipped
+  15 did not run

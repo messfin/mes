@@ -1,0 +1,139 @@
+
+Running 30 tests using 4 workers
+
+  Γ£ô   2 [chromium] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book (3.1s)
+  Γ£ô   4 [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:9 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book (2.5s)
+  Γ£ô   3 [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:7:6 ΓÇ║ authenticate as admin (4.1s)
+  Γ£ô   6 [chromium] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books (3.1s)
+  Γ£ô   8 [chromium] ΓÇ║ tests\ui\specs\profile-stored-authentication.spec.ts:13:9 ΓÇ║ Profile - Stored Auth ΓÇ║ Check logged in (1.0s)
+  Γ£ô   5 [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:20:7 ΓÇ║ Book Store - Login ΓÇ║ successfull login (4.4s)
+  Γ£ô   7 [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:17:6 ΓÇ║ authenticate as user (3.9s)
+  Γ£ô   9 [chromium] ΓÇ║ tests\ui\specs\profile-with-dynamic-pom.spec.ts:15:9 ΓÇ║ Profile - Dynamic Page Object Model ΓÇ║ Check logged in (1.0s)
+  Γ£ô  10 [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:25:7 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid username (1.5s)
+  Γ£ô  11 [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-admin.spec.ts:15:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ Sort books - admin (1.2s)
+  Γ£ô  12 [chromium] ΓÇ║ tests\ui\specs\login.spec.ts:40:7 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid password (2.0s)
+  Γ£ô  14 [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-user.spec.ts:15:9 ΓÇ║ Book Store Application - Profile ΓÇ║ Sort books - user (1.3s)
+  Γ£ô  13 [chromium] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user (3.1s)
+  Γ£ÿ   1 [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:46:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book (11.5s)
+  Γ£ô  15 [chromium] ΓÇ║ tests\ui\specs\visual-regression.spec.ts:14:9 ΓÇ║ Visual Regression ΓÇ║ Profile Page loads correctly (1.5s)
+  Γ£ô  16 [chromium] ΓÇ║ tests\ui\specs\visual-regression.spec.ts:28:9 ΓÇ║ Visual Regression ΓÇ║ Profile Page book list is visible (929ms)
+  Γ£ô  19 [chromium-auth] ΓÇ║ tests\ui\specs\book-with-dynamic-pom.spec.ts:13:9 ΓÇ║ Books - Dynamic Page Object Model ΓÇ║ Add brand new book (3.1s)
+  Γ£ô  18 [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api.spec.ts:35:9 ΓÇ║ Books - Fixture & API ΓÇ║ Add brand new book (2.7s)
+  Γ£ô  22 [chromium-auth] ΓÇ║ tests\ui\specs\profile-stored-authentication.spec.ts:13:9 ΓÇ║ Profile - Stored Auth ΓÇ║ Check logged in (1.2s)
+  Γ£ô  21 [chromium-auth] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books (1.9s)
+  Γ£ô  20 [chromium-auth] ΓÇ║ tests\ui\specs\login.spec.ts:20:7 ΓÇ║ Book Store - Login ΓÇ║ successfull login (5.4s)
+  Γ£ô  23 [chromium-auth] ΓÇ║ tests\ui\specs\profile-with-dynamic-pom.spec.ts:15:9 ΓÇ║ Profile - Dynamic Page Object Model ΓÇ║ Check logged in (2.0s)
+  Γ£ô  24 [chromium-auth] ΓÇ║ tests\ui\specs\visual-regression.spec.ts:14:9 ΓÇ║ Visual Regression ΓÇ║ Profile Page loads correctly (1.9s)
+  Γ£ô  25 [chromium-auth] ΓÇ║ tests\ui\specs\login.spec.ts:25:7 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid username (1.3s)
+  Γ£ô  26 [chromium-auth] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-admin.spec.ts:15:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ Sort books - admin (2.0s)
+  Γ£ô  27 [chromium-auth] ΓÇ║ tests\ui\specs\visual-regression.spec.ts:28:9 ΓÇ║ Visual Regression ΓÇ║ Profile Page book list is visible (2.1s)
+  Γ£ô  28 [chromium-auth] ΓÇ║ tests\ui\specs\login.spec.ts:40:7 ΓÇ║ Book Store - Login ΓÇ║ failing login - invalid password (2.1s)
+  Γ£ô  30 [chromium-auth] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-user.spec.ts:15:9 ΓÇ║ Book Store Application - Profile ΓÇ║ Sort books - user (1.4s)
+  Γ£ÿ  17 [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:46:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book (10.7s)
+  Γ£ô  29 [chromium-auth] ΓÇ║ tests\ui\specs-auth\profile-stored-auth-multi-role-example.spec.ts:12:9 ΓÇ║ Book Store Application - Profile - Admin ΓÇ║ admin and user (3.5s)
+
+
+  1) [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:46:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"Book a[7mlready present in the[27m your collection!"[39m
+    Received: [31m"Book a[7mdded to[27m your collection!"[39m
+
+       at tests\ui\pages\book-page.ts:37
+
+      35 |       this.page.on('dialog', async (dialog) => {
+      36 |           dialogMessage = dialog.message();
+    > 37 |           expect(dialogMessage).toBe(messages.book.duplicate);
+         |                                 ^
+      38 |           await dialog.accept();
+      39 |         });
+      40 |     }
+        at Page.<anonymous> (D:\mestest\tests\ui\pages\book-page.ts:37:33)
+
+    Error: locator.click: Test ended.
+    Call log:
+    [2m  - waiting for getByText('Add To Your Collection', { exact: true })[22m
+    [2m    - locator resolved to <button class="primary-btn" id="add-to-collection-btn">Add To Your Collection</button>[22m
+    [2m  - attempting click action[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is visible, enabled and stable[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+    [2m    - performing click action[22m
+
+
+       at tests\ui\pages\book-page.ts:41
+
+      39 |         });
+      40 |     }
+    > 41 |     await this.addToYourCollectionButton.click();
+         |                                          ^
+      42 |   }
+      43 |
+      44 |   async checkSpeakingJSIsbn() {
+        at BookPage.addToYourCollection (D:\mestest\tests\ui\pages\book-page.ts:41:42)
+        at Object.bookPage (D:\mestest\tests\ui\fixtures\books-fixture.ts:23:20)
+
+    attachment #1: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  2) [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:46:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"Book a[7mlready present in the[27m your collection!"[39m
+    Received: [31m"Book a[7mdded to[27m your collection!"[39m
+
+       at tests\ui\pages\book-page.ts:37
+
+      35 |       this.page.on('dialog', async (dialog) => {
+      36 |           dialogMessage = dialog.message();
+    > 37 |           expect(dialogMessage).toBe(messages.book.duplicate);
+         |                                 ^
+      38 |           await dialog.accept();
+      39 |         });
+      40 |     }
+        at Page.<anonymous> (D:\mestest\tests\ui\pages\book-page.ts:37:33)
+
+    Error: locator.click: Test ended.
+    Call log:
+    [2m  - waiting for getByText('Add To Your Collection', { exact: true })[22m
+    [2m    - locator resolved to <button class="primary-btn" id="add-to-collection-btn">Add To Your Collection</button>[22m
+    [2m  - attempting click action[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is visible, enabled and stable[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+    [2m    - performing click action[22m
+
+
+       at tests\ui\pages\book-page.ts:41
+
+      39 |         });
+      40 |     }
+    > 41 |     await this.addToYourCollectionButton.click();
+         |                                          ^
+      42 |   }
+      43 |
+      44 |   async checkSpeakingJSIsbn() {
+        at BookPage.addToYourCollection (D:\mestest\tests\ui\pages\book-page.ts:41:42)
+        at Object.bookPage (D:\mestest\tests\ui\fixtures\books-fixture.ts:23:20)
+
+    attachment #1: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium-auth\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-book-with-f-2d63e-ted-auth-Add-duplicate-book-chromium-auth\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  2 failed
+    [chromium] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:46:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+    [chromium-auth] ΓÇ║ tests\ui\specs\book-with-fixture-and-api-isolated-auth.spec.ts:46:7 ΓÇ║ Book - Fixture & API with isolated auth ΓÇ║ Add duplicate book 
+  28 passed (43.6s)

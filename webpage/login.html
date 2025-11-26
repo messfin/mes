@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page Practise | Rahul Shetty Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/elements-style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        
+        <!-- Info Section -->
+        <div class="login-info">
+            <h1>ZMTECH</h1>
+            <p>Login page</p>
+            
+            <div class="credentials-box">
+                <h3>Test Credentials</h3>
+                <code>Username: mesfin</code>
+                <code>Password: 1234</code>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="login-form-section">
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter username">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password">
+                </div>
+
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="role" value="admin" checked>
+                        Admin
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="role" value="user">
+                        User
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="role-select">Role Type</label>
+                    <select id="role-select">
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="consultant">Consultant</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
+                </div>
+
+                <button type="submit" id="signInBtn" class="submit-btn">Sign In</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <h3>Restricted Access</h3>
+            <p>You are switching to User mode. Some features may be limited compared to Admin access.</p>
+            <button id="okayBtn" class="modal-btn">Okay</button>
+        </div>
+    </div>
+
+    <script src="js/login-script.js"></script>
+</body>
+</html>
+

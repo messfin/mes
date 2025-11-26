@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZMTECH | Elements</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/zmtech-style.css">
+    <link rel="stylesheet" href="css/elements-style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="/ZMTECH" class="logo">ZMTECH</a>
+
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-group">
+                <h4>Book Store Application</h4>
+                <a href="/login" class="nav-item">Login</a>
+                <a href="/books" class="nav-item">Book Store</a>
+                <a href="/profile" class="nav-item">Profile</a>
+                <a href="/books-api" class="nav-item">Book Store API</a>
+            </div>
+            <div class="sidebar-group">
+                <h4>Elements</h4>
+                <a href="#text-box" class="nav-item active">Text Box</a>
+                <a href="#check-box" class="nav-item">Check Box</a>
+                <a href="#radio-button" class="nav-item">Radio Button</a>
+                <a href="#web-tables" class="nav-item">Web Tables</a>
+                <a href="#buttons" class="nav-item">Buttons</a>
+                <a href="#links" class="nav-item">Links</a>
+                <a href="#broken" class="nav-item">Broken Links - Images</a>
+                <a href="#upload-download" class="nav-item">Upload and Download</a>
+                <a href="#dynamic-properties" class="nav-item">Dynamic Properties</a>
+            </div>
+            <div class="sidebar-group">
+                <h4>Interactions</h4>
+                <a href="/interactions" class="nav-item">Interactions</a>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            
+            <!-- Text Box Section -->
+            <div id="text-box" class="section-content active">
+                <div class="content-header">
+                    <h2>Text Box</h2>
+                </div>
+                
+                <form id="userForm">
+                    <div class="form-group">
+                        <label for="userName">Full Name</label>
+                        <input type="text" id="userName" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Email</label>
+                        <input type="email" id="userEmail" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="currentAddress">Current Address</label>
+                        <textarea id="currentAddress" rows="3" placeholder="Current Address"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="permanentAddress">Permanent Address</label>
+                        <textarea id="permanentAddress" rows="3" placeholder="Permanent Address"></textarea>
+                    </div>
+                    <button type="submit" id="submit" class="primary-btn">Submit</button>
+                </form>
+
+                <div id="output" class="output-box">
+                    <p>Name: <span id="name"></span></p>
+                    <p>Email: <span id="email"></span></p>
+                    <p>Current Address: <span id="currentAddr"></span></p>
+                    <p>Permanent Address: <span id="permAddr"></span></p>
+                </div>
+            </div>
+
+            <!-- Check Box Section -->
+            <div id="check-box" class="section-content">
+                <div class="content-header"><h2>Check Box</h2></div>
+                <div class="checkbox-tree">
+                    <div class="tree-node">
+                        <button class="toggle-btn">></button>
+                        <label><input type="checkbox" id="tree-home"> Home</label>
+                    </div>
+                    <div class="tree-children hidden">
+                        <div class="tree-node">
+                            <button class="toggle-btn">></button>
+                            <label><input type="checkbox" id="tree-desktop"> Desktop</label>
+                        </div>
+                        <div class="tree-children hidden">
+                            <div class="tree-node"><label><input type="checkbox" value="Notes"> Notes</label></div>
+                            <div class="tree-node"><label><input type="checkbox" value="Commands"> Commands</label></div>
+                        </div>
+                        
+                        <div class="tree-node">
+                            <button class="toggle-btn">></button>
+                            <label><input type="checkbox" id="tree-documents"> Documents</label>
+                        </div>
+                        <div class="tree-children hidden">
+                            <div class="tree-node"><label><input type="checkbox" value="WorkSpace"> WorkSpace</label></div>
+                            <div class="tree-node"><label><input type="checkbox" value="Office"> Office</label></div>
+                        </div>
+
+                        <div class="tree-node">
+                            <button class="toggle-btn">></button>
+                            <label><input type="checkbox" id="tree-downloads"> Downloads</label>
+                        </div>
+                        <div class="tree-children hidden">
+                            <div class="tree-node"><label><input type="checkbox" value="Word File"> Word File.doc</label></div>
+                            <div class="tree-node"><label><input type="checkbox" value="Excel File"> Excel File.doc</label></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="result-checkbox" class="output-box">
+                    <p>You have selected: <span id="selected-items"></span></p>
+                </div>
+            </div>
+
+            <!-- Radio Button Section -->
+            <div id="radio-button" class="section-content">
+                <div class="content-header"><h2>Radio Button</h2></div>
+                <div class="radio-container">
+                    <div class="custom-radio">
+                        <input type="radio" id="yesRadio" name="like" value="Yes">
+                        <label for="yesRadio">Yes</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" id="impressiveRadio" name="like" value="Impressive">
+                        <label for="impressiveRadio">Impressive</label>
+                    </div>
+                    <div class="custom-radio">
+                        <input type="radio" id="noRadio" name="like" value="No" disabled>
+                        <label for="noRadio" class="disabled">No</label>
+                    </div>
+                </div>
+                <div id="result-radio" class="output-box">
+                    <p>You have selected: <span id="radio-selected"></span></p>
+                </div>
+            </div>
+
+            <!-- Web Tables Section -->
+            <div id="web-tables" class="section-content">
+                <div class="content-header"><h2>Web Tables</h2></div>
+                <div class="table-wrapper">
+                    <div class="table-actions">
+                        <button id="add-record-btn" class="primary-btn">Add</button>
+                        <input type="text" id="search-box" placeholder="Type to search">
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                                <th>Email</th>
+                                <th>Salary</th>
+                                <th>Department</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <!-- JS will populate -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Buttons Section -->
+            <div id="buttons" class="section-content">
+                <div class="content-header"><h2>Buttons</h2></div>
+                <div class="buttons-container">
+                    <button id="doubleClickBtn" class="primary-btn">Double Click Me</button>
+                    <button id="rightClickBtn" class="primary-btn">Right Click Me</button>
+                    <button id="dynamicClickBtn" class="primary-btn">Click Me</button>
+                </div>
+                <div id="result-buttons" class="output-box">
+                    <p id="doubleClickMessage"></p>
+                    <p id="rightClickMessage"></p>
+                    <p id="dynamicClickMessage"></p>
+                </div>
+            </div>
+
+            <!-- Links Section -->
+            <div id="links" class="section-content">
+                <div class="content-header"><h2>Links</h2></div>
+                <div class="links-container">
+                    <p>Following links will open new tab</p>
+                    <p><a href="https://ZMTECH.com" target="_blank" id="simpleLink">Home</a></p>
+                    <p><a href="https://ZMTECH.com" target="_blank" id="dynamicLink">Home_z8C7</a></p>
+                    
+                    <p>Following links will send an api call</p>
+                    <p><a href="javascript:void(0)" id="created">Created</a></p>
+                    <p><a href="javascript:void(0)" id="no-content">No Content</a></p>
+                    <p><a href="javascript:void(0)" id="moved">Moved</a></p>
+                    <p><a href="javascript:void(0)" id="bad-request">Bad Request</a></p>
+                    <p><a href="javascript:void(0)" id="unauthorized">Unauthorized</a></p>
+                    <p><a href="javascript:void(0)" id="forbidden">Forbidden</a></p>
+                    <p><a href="javascript:void(0)" id="invalid-url">Not Found</a></p>
+                </div>
+                <div id="link-response" class="output-box"></div>
+            </div>
+
+            <!-- Broken Links - Images Section -->
+            <div id="broken" class="section-content">
+                <div class="content-header"><h2>Broken Links - Images</h2></div>
+                <div class="broken-container">
+                    <p>Valid Image</p>
+                    <img src="https://ZMTECH.com/images/Toolsqa.jpg" alt="Valid Image" class="demo-img">
+                    <p>Broken Image</p>
+                    <img src="https://ZMTECH.com/images/Toolsqa_1.jpg" alt="Broken Image" class="demo-img">
+                    <p>Valid Link</p>
+                    <a href="http://ZMTECH.com" target="_blank">Click Here for Valid Link</a>
+                    <p>Broken Link</p>
+                    <a href="http://the-internet.herokuapp.com/status_codes/500" target="_blank">Click Here for Broken Link</a>
+                </div>
+            </div>
+
+            <!-- Upload and Download Section -->
+            <div id="upload-download" class="section-content">
+                <div class="content-header"><h2>Upload and Download</h2></div>
+                <div class="upload-container">
+                    <div class="form-group">
+                        <label>Download</label>
+                        <button id="downloadButton" class="primary-btn">Download</button>
+                    </div>
+                    <div class="form-group">
+                        <label>Select a file</label>
+                        <input type="file" id="uploadFile" class="file-input">
+                    </div>
+                    <p id="uploadedFilePath"></p>
+                </div>
+            </div>
+
+            <!-- Dynamic Properties Section -->
+            <div id="dynamic-properties" class="section-content">
+                <div class="content-header"><h2>Dynamic Properties</h2></div>
+                <div class="dynamic-container">
+                    <p>This text has random Id</p>
+                    <button id="enableAfter" class="primary-btn" disabled>Will enable 5 seconds</button>
+                    <button id="colorChange" class="primary-btn mt-2">Color Change</button>
+                    <button id="visibleAfter" class="primary-btn mt-2" style="display:none">Visible After 5 Seconds</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- Registration Form Modal -->
+        <div id="registrationModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Registration Form</h3>
+                    <span class="close-modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <form id="registrationForm">
+                        <input type="hidden" id="editIndex">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" id="firstName" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" id="lastName" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="userEmailModal" placeholder="name@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Age</label>
+                            <input type="number" id="age" placeholder="Age" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Salary</label>
+                            <input type="number" id="salary" placeholder="Salary" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Department</label>
+                            <input type="text" id="department" placeholder="Department" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="primary-btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal -->
+        <div id="deleteModal" class="modal">
+            <div class="modal-content" style="width: 400px;">
+                <div class="modal-header">
+                    <h3>Delete Record</h3>
+                    <span class="close-delete-modal close-modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this record?</p>
+                    <div class="modal-footer">
+                        <button id="confirmDeleteBtn" class="primary-btn" style="background-color: #dc3545;">Delete</button>
+                        <button id="cancelDeleteBtn" class="primary-btn" style="background-color: #6c757d; margin-right: 0.5rem;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/elements-script.js"></script>
+</body>
+</html>
+

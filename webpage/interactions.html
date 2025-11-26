@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZMTECH | Interactions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/elements-style.css">
+    <link rel="stylesheet" href="css/interactions-style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="/ZMTECH" class="logo">ZMTECH</a>
+
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-group">
+                <h4>Interactions</h4>
+                <a href="#sortable" class="nav-item active">Sortable</a>
+                <a href="#selectable" class="nav-item">Selectable</a>
+                <a href="#resizable" class="nav-item">Resizable</a>
+                <a href="#droppable" class="nav-item">Droppable</a>
+                <a href="#dragabble" class="nav-item">Dragabble</a>
+            </div>
+            <div class="sidebar-group">
+                <h4>Elements</h4>
+                <a href="/elements" class="nav-item">Elements</a>
+            </div>
+            <div class="sidebar-group">
+                <h4>Book Store Application</h4>
+                <a href="/login" class="nav-item">Login</a>
+                <a href="/books" class="nav-item">Book Store</a>
+                <a href="/profile" class="nav-item">Profile</a>
+                <a href="/books-api" class="nav-item">Book Store API</a>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            
+            <!-- Sortable Section -->
+            <div id="sortable" class="interaction-section active">
+                <div class="content-header"><h2>Sortable</h2></div>
+                <p style="margin-bottom: 1rem; color: var(--text-secondary);">Drag and drop the items to reorder them.</p>
+                
+                <div class="tabs-container">
+                    <button class="tab-btn active" data-target="sortable-list-tab">List</button>
+                    <button class="tab-btn" data-target="sortable-grid-tab">Grid</button>
+                </div>
+
+                <div id="sortable-list-tab" class="tab-content active">
+                    <ul id="sortable-list" class="sortable-list">
+                        <li class="sortable-item" draggable="true">One</li>
+                        <li class="sortable-item" draggable="true">Two</li>
+                        <li class="sortable-item" draggable="true">Three</li>
+                        <li class="sortable-item" draggable="true">Four</li>
+                        <li class="sortable-item" draggable="true">Five</li>
+                        <li class="sortable-item" draggable="true">Six</li>
+                    </ul>
+                </div>
+
+                <div id="sortable-grid-tab" class="tab-content">
+                    <ul id="sortable-grid" class="sortable-grid">
+                        <li class="sortable-item" draggable="true">One</li>
+                        <li class="sortable-item" draggable="true">Two</li>
+                        <li class="sortable-item" draggable="true">Three</li>
+                        <li class="sortable-item" draggable="true">Four</li>
+                        <li class="sortable-item" draggable="true">Five</li>
+                        <li class="sortable-item" draggable="true">Six</li>
+                        <li class="sortable-item" draggable="true">Seven</li>
+                        <li class="sortable-item" draggable="true">Eight</li>
+                        <li class="sortable-item" draggable="true">Nine</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Selectable Section -->
+            <div id="selectable" class="interaction-section">
+                <div class="content-header"><h2>Selectable</h2></div>
+                <p style="margin-bottom: 1rem; color: var(--text-secondary);">Click on items to select them.</p>
+                
+                <div class="tabs-container">
+                    <button class="tab-btn active" data-target="selectable-list-tab">List</button>
+                    <button class="tab-btn" data-target="selectable-grid-tab">Grid</button>
+                </div>
+
+                <div id="selectable-list-tab" class="tab-content active">
+                    <ul id="selectable-list" class="selectable-list">
+                        <li class="selectable-item">Cras justo odio</li>
+                        <li class="selectable-item">Dapibus ac facilisis in</li>
+                        <li class="selectable-item">Morbi leo risus</li>
+                        <li class="selectable-item">Porta ac consectetur ac</li>
+                    </ul>
+                </div>
+
+                <div id="selectable-grid-tab" class="tab-content">
+                    <ul id="selectable-grid" class="selectable-grid">
+                        <li class="selectable-item">One</li>
+                        <li class="selectable-item">Two</li>
+                        <li class="selectable-item">Three</li>
+                        <li class="selectable-item">Four</li>
+                        <li class="selectable-item">Five</li>
+                        <li class="selectable-item">Six</li>
+                        <li class="selectable-item">Seven</li>
+                        <li class="selectable-item">Eight</li>
+                        <li class="selectable-item">Nine</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Resizable Section -->
+            <div id="resizable" class="interaction-section">
+                <div class="content-header"><h2>Resizable</h2></div>
+                <p style="margin-bottom: 1rem; color: var(--text-secondary);">Drag the bottom-right corner to resize.</p>
+                <div id="resizableBox" class="resizable-box">
+                    <span>Resizable Box</span>
+                    <div class="resize-handle"></div>
+                </div>
+            </div>
+
+            <!-- Droppable Section -->
+            <div id="droppable" class="interaction-section">
+                <div class="content-header"><h2>Droppable</h2></div>
+                <p style="margin-bottom: 1rem; color: var(--text-secondary);">Drag the 'Drag me' box to the 'Drop here' area.</p>
+                <div class="droppable-container">
+                    <div id="draggableSource" class="draggable-source" draggable="true">Drag me</div>
+                    <div id="dropTarget" class="drop-target">
+                        <p>Drop here</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Draggable Section -->
+            <div id="dragabble" class="interaction-section">
+                <div class="content-header"><h2>Dragabble</h2></div>
+                <p style="margin-bottom: 1rem; color: var(--text-secondary);">Click and drag the box around the area.</p>
+                <div class="draggable-area">
+                    <div id="dragBox" class="drag-box">Drag me</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/interactions-script.js"></script>
+</body>
+</html>
+

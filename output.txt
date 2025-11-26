@@ -1,0 +1,19 @@
+Error: Login failed: Did not navigate to profile page. Error: page.waitForURL: Timeout 20000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "load"
+  navigated to "http://localhost:3000/profile.html"
+  "domcontentloaded" event fired
+============================================================
+
+   at tests\setup\global-setup.ts:22
+
+  20 |   // Wait for navigation after login
+  21 |   await page.waitForURL(/.*profile/, { timeout: 20000 }).catch(async (e) => {
+> 22 |     throw new Error(`Login failed: Did not navigate to profile page. Error: ${e.message}`);
+     |           ^
+  23 |   });
+  24 |   await loginPage.checkLoggedIn();
+  25 |   await page.context().storageState({ path: storageState as string });
+    at D:\mestest\tests\setup\global-setup.ts:22:11
+    at globalSetup (D:\mestest\tests\setup\global-setup.ts:21:3)
+

@@ -1,0 +1,11 @@
+/* Copy Light Theme Variables */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-primary: #06b6d4;
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --hover-bg: #f8f9fa;
+}
+

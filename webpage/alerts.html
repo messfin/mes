@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZMTECH | Alerts, Frame & Windows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/elements-style.css">
+    <link rel="stylesheet" href="css/alerts-style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="/ZMTECH" class="logo">ZMTECH</a>
+
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-group">
+                <h4>Alerts, Frame & Windows</h4>
+                <a href="#browser-windows" class="nav-item active">Browser Windows</a>
+                <a href="#alerts" class="nav-item">Alerts</a>
+                <a href="#frames" class="nav-item">Frames</a>
+                <a href="#nested-frames" class="nav-item">Nested Frames</a>
+                <a href="#modal-dialogs" class="nav-item">Modal Dialogs</a>
+            </div>
+            <div class="sidebar-group">
+                <h4>Elements</h4>
+                <a href="/elements" class="nav-item">Elements</a>
+            </div>
+            <div class="sidebar-group">
+                <h4>Book Store Application</h4>
+                <a href="/login" class="nav-item">Login</a>
+                <a href="/books" class="nav-item">Book Store</a>
+                <a href="/profile" class="nav-item">Profile</a>
+                <a href="/books-api" class="nav-item">Book Store API</a>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            
+            <!-- Browser Windows Section -->
+            <div id="browser-windows" class="alert-section active">
+                <div class="content-header"><h2>Browser Windows</h2></div>
+                <div class="window-container">
+                    <button id="tabButton" class="primary-btn window-btn">New Tab</button>
+                    <button id="windowButton" class="primary-btn window-btn">New Window</button>
+                    <button id="msgWindowButton" class="primary-btn window-btn">New Window Message</button>
+                </div>
+            </div>
+
+            <!-- Alerts Section -->
+            <div id="alerts" class="alert-section">
+                <div class="content-header"><h2>Alerts</h2></div>
+                
+                <div class="alert-row">
+                    <span class="alert-label">Click Button to see alert</span>
+                    <button id="alertButton" class="primary-btn">Click me</button>
+                </div>
+
+                <div class="alert-row">
+                    <span class="alert-label">On button click, alert will appear after 5 seconds</span>
+                    <button id="timerAlertButton" class="primary-btn">Click me</button>
+                </div>
+
+                <div class="alert-row">
+                    <span class="alert-label">On button click, confirm box will appear</span>
+                    <button id="confirmButton" class="primary-btn">Click me</button>
+                    <span id="confirmResult"></span>
+                </div>
+
+                <div class="alert-row">
+                    <span class="alert-label">On button click, prompt box will appear</span>
+                    <button id="promtButton" class="primary-btn">Click me</button>
+                    <span id="promptResult"></span>
+                </div>
+            </div>
+
+            <!-- Frames Section -->
+            <div id="frames" class="alert-section">
+                <div class="content-header"><h2>Frames</h2></div>
+                
+                <div class="frame-container">
+                    <div class="frame-label">Frame 1</div>
+                    <iframe src="sample-page.html" id="frame1" width="500" height="350"></iframe>
+                </div>
+
+                <div class="frame-container">
+                    <div class="frame-label">Frame 2</div>
+                    <iframe src="sample-page.html" id="frame2" width="100" height="100"></iframe>
+                </div>
+            </div>
+
+            <!-- Nested Frames Section -->
+            <div id="nested-frames" class="alert-section">
+                <div class="content-header"><h2>Nested Frames</h2></div>
+                <div class="nested-frame-container">
+                    <div class="frame-label">Parent Frame</div>
+                    <iframe src="parent-frame.html" id="frame1" width="100%" height="300"></iframe>
+                </div>
+            </div>
+
+            <!-- Modal Dialogs Section -->
+            <div id="modal-dialogs" class="alert-section">
+                <div class="content-header"><h2>Modal Dialogs</h2></div>
+                <p style="margin-bottom: 2rem; color: var(--text-secondary);">Click on button to see modal dialogs</p>
+                
+                <div class="modal-trigger-row">
+                    <button id="showSmallModal" class="primary-btn">Small modal</button>
+                    <button id="showLargeModal" class="primary-btn">Large modal</button>
+                </div>
+
+                <!-- Small Modal -->
+                <div id="smallModal" class="custom-modal-overlay">
+                    <div class="custom-modal small">
+                        <div class="custom-modal-header">
+                            <h4>Small Modal</h4>
+                            <button id="closeSmallModal" class="custom-modal-close">&times;</button>
+                        </div>
+                        <div class="custom-modal-body">
+                            This is a small modal. It has very less content.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Large Modal -->
+                <div id="largeModal" class="custom-modal-overlay">
+                    <div class="custom-modal large">
+                        <div class="custom-modal-header">
+                            <h4>Large Modal</h4>
+                            <button id="closeLargeModal" class="custom-modal-close">&times;</button>
+                        </div>
+                        <div class="custom-modal-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/alerts-script.js></script>
+</body>
+</html>
+

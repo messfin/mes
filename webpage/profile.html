@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZMTECH | Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/elements-style.css">
+    <style>
+        .profile-header {
+            margin-bottom: 2rem;
+        }
+        .profile-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+        .profile-value {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .action-btn {
+            padding: 0.5rem 1rem;
+            margin-right: 0.5rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .logout-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .goto-store-btn {
+            background-color: var(--accent-primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="/ZMTECH" class="logo">ZMTECH</a>
+
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-group">
+                <h4>Book Store Application</h4>
+                <a href="/login" class="nav-item">Login</a>
+                <a href="/books" class="nav-item">Book Store</a>
+                <a href="/profile" class="nav-item active">Profile</a>
+                <a href="/books-api" class="nav-item">Book Store API</a>
+            </div>
+            <div class="sidebar-group">
+                <h4>Elements</h4>
+                <a href="/elements" class="nav-item">Elements</a>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <div class="content-header">
+                <h2>Profile</h2>
+                <button id="logout-btn" class="action-btn logout-btn">Log out</button>
+            </div>
+
+            <div class="profile-info">
+                <div class="profile-label">User Name :</div>
+                <div class="profile-value" id="username-display">testuser</div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="search-box" placeholder="Type to search">
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Publisher</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- JS will populate -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="margin-top: 2rem; text-align: center;">
+                <button id="goto-store" class="action-btn goto-store-btn">Go To Book Store</button>
+                <button id="deleteAccountBtn" class="action-btn" style="background: #dc3545; color: white;">Delete Account</button>
+                <button id="deleteAllBooksBtn" class="action-btn" style="background: #dc3545; color: white;">Delete All Books</button>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal -->
+        <div id="deleteModal" class="modal">
+            <div class="modal-content" style="width: 400px;">
+                <div class="modal-header">
+                    <h3>Delete Confirmation</h3>
+                    <span class="close-delete-modal close-modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p id="deleteModalText">Are you sure you want to delete this?</p>
+                    <div class="modal-footer">
+                        <button id="confirmDeleteBtn" class="primary-btn" style="background-color: #dc3545;">Delete</button>
+                        <button id="cancelDeleteBtn" class="primary-btn" style="background-color: #6c757d; margin-right: 0.5rem;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mock Data for Profile
+            let books = [
+                {
+                    image: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+                    title: "Git Pocket Guide",
+                    author: "Richard E. Silverman",
+                    publisher: "O'Reilly Media"
+                },
+                {
+                    image: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+                    title: "Learning JavaScript Design Patterns",
+                    author: "Addy Osmani",
+                    publisher: "O'Reilly Media"
+                },
+                {
+                    image: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+                    title: "Designing Evolvable Web APIs with ASP.NET",
+                    author: "Glenn Block et al.",
+                    publisher: "O'Reilly Media"
+                },
+                {
+                    image: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+                    title: "Eloquent JavaScript, Second Edition",
+                    author: "Marijn Haverbeke",
+                    publisher: "No Starch Press"
+                },
+                {
+                    image: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+                    title: "Understanding ECMAScript 6",
+                    author: "Nicholas C. Zakas",
+                    publisher: "No Starch Press"
+                }
+            ];
+
+            const tableBody = document.getElementById('table-body');
+            const deleteModal = document.getElementById('deleteModal');
+            const deleteModalText = document.getElementById('deleteModalText');
+            const closeDeleteModal = document.querySelector('.close-delete-modal');
+            const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+            const cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
+            let deleteAction = null;
+            let bookToDeleteIndex = -1;
+
+            function renderTable(data) {
+                tableBody.innerHTML = '';
+                if (data.length === 0) {
+                    tableBody.innerHTML = '<tr><td colspan="5" style="text-align: center;">No books found</td></tr>';
+                    return;
+                }
+
+                data.forEach((book, index) => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td><img src="${book.image}" alt="${book.title}" class="book-img" onerror="this.src='https://via.placeholder.com/50x70?text=Book'"></td>
+                        <td><a href="#" class="book-title" onclick="alert('Book details simulated')">${book.title}</a></td>
+                        <td>${book.author}</td>
+                        <td>${book.publisher}</td>
+                        <td><button class="action-btn delete-book-btn" data-index="${index}" style="background: transparent; border: 1px solid #dc3545; color: #dc3545;">🗑️</button></td>
+                    `;
+                    tableBody.appendChild(tr);
+                });
+
+                // Add event listeners to new delete buttons
+                document.querySelectorAll('.delete-book-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        bookToDeleteIndex = parseInt(e.target.closest('button').dataset.index);
+                        deleteAction = 'singleBook';
+                        deleteModalText.textContent = "Are you sure you want to delete this book?";
+                        deleteModal.style.display = 'block';
+                    });
+                });
+            }
+
+            renderTable(books);
+
+            document.getElementById('logout-btn').addEventListener('click', () => {
+                window.location.href = '/login';
+            });
+
+            document.getElementById('goto-store').addEventListener('click', () => {
+                window.location.href = '/books';
+            });
+
+            // Delete Account Logic
+            document.getElementById('deleteAccountBtn').addEventListener('click', () => {
+                deleteAction = 'account';
+                deleteModalText.textContent = "Are you sure you want to delete your account? This action cannot be undone.";
+                deleteModal.style.display = 'block';
+            });
+
+            // Delete All Books Logic
+            document.getElementById('deleteAllBooksBtn').addEventListener('click', () => {
+                deleteAction = 'allBooks';
+                deleteModalText.textContent = "Are you sure you want to delete all books from your collection?";
+                deleteModal.style.display = 'block';
+            });
+
+            // Modal Actions
+            confirmDeleteBtn.addEventListener('click', () => {
+                if (deleteAction === 'account') {
+                    window.location.href = '/login';
+                } else if (deleteAction === 'allBooks') {
+                    books = [];
+                    renderTable(books);
+                    deleteModal.style.display = 'none';
+                } else if (deleteAction === 'singleBook' && bookToDeleteIndex > -1) {
+                    books.splice(bookToDeleteIndex, 1);
+                    renderTable(books);
+                    deleteModal.style.display = 'none';
+                }
+                deleteAction = null;
+            });
+
+            cancelDeleteBtn.addEventListener('click', () => {
+                deleteModal.style.display = 'none';
+                deleteAction = null;
+            });
+
+            closeDeleteModal.addEventListener('click', () => {
+                deleteModal.style.display = 'none';
+                deleteAction = null;
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target == deleteModal) {
+                    deleteModal.style.display = 'none';
+                    deleteAction = null;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

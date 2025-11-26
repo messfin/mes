@@ -1,0 +1,65 @@
+
+Running 4 tests using 2 workers
+
+  Γ£ÿ  1 [chromium] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books (2.9s)
+  Γ£ô  2 [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:7:6 ΓÇ║ authenticate as admin (3.9s)
+  Γ£ô  3 [auth-setup] ΓÇ║ tests\setup\auth-setup.ts:17:6 ΓÇ║ authenticate as user (2.5s)
+  Γ£ÿ  4 [chromium-auth] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books (1.5s)
+
+
+  1) [chromium] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books 
+
+    Error: Sort failed! Row1: "ZMTECH", Row2: "Login". Expected: "Designing Evolvable Web APIs with ASP.NET" or "Learning JavaScript Design Patterns"
+
+       at tests\ui\pages\profile-page.ts:72
+
+      70 |
+      71 |     if (!isAsc && !isDesc) {
+    > 72 |       throw new Error(`Sort failed! Row1: "${text1}", Row2: "${text2}". Expected: "${sorted[0].title}" or "${sorted[1].title}"`);
+         |             ^
+      73 |     }
+      74 |   }
+      75 |
+        at SearchPage.checkSort (D:\mestest\tests\ui\pages\profile-page.ts:72:13)
+        at D:\mestest\tests\ui\specs\profile-api-interception.spec.ts:25:9
+
+    Error Context: test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  2) [chromium-auth] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books 
+
+    Error: Sort failed! Row1: "ZMTECH", Row2: "Login". Expected: "Designing Evolvable Web APIs with ASP.NET" or "Learning JavaScript Design Patterns"
+
+       at tests\ui\pages\profile-page.ts:72
+
+      70 |
+      71 |     if (!isAsc && !isDesc) {
+    > 72 |       throw new Error(`Sort failed! Row1: "${text1}", Row2: "${text2}". Expected: "${sorted[0].title}" or "${sorted[1].title}"`);
+         |             ^
+      73 |     }
+      74 |   }
+      75 |
+        at SearchPage.checkSort (D:\mestest\tests\ui\pages\profile-page.ts:72:13)
+        at D:\mestest\tests\ui\specs\profile-api-interception.spec.ts:25:9
+
+    Error Context: test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium-auth\error-context.md
+
+    attachment #2: trace (application/zip) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+    test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium-auth\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\tests-ui-specs-profile-api-703ac-API-Interception-Sort-books-chromium-auth\trace.zip
+
+    ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  2 failed
+    [chromium] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books 
+    [chromium-auth] ΓÇ║ tests\ui\specs\profile-api-interception.spec.ts:14:9 ΓÇ║ Profile - API Interception ΓÇ║ Sort books 
+  2 passed (16.8s)

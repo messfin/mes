@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Practice | Premium Edition</title>
+    <meta name="description" content="A premium, modern practice page for web automation testing featuring various UI components.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css>
+</head>
+<body>
+
+    <h1>Automation Practice</h1>
+    <p class="subtitle">Master your testing skills with this premium playground</p>
+
+    <div class="container">
+        
+        <!-- Radio Buttons -->
+        <div class="card">
+            <h2>Radio Button Example</h2>
+            <label>
+                <input type="radio" name="radioButton" value="radio1"> Radio 1
+            </label>
+            <label>
+                <input type="radio" name="radioButton" value="radio2"> Radio 2
+            </label>
+            <label>
+                <input type="radio" name="radioButton" value="radio3"> Radio 3
+            </label>
+        </div>
+
+        <!-- Suggestion Class -->
+        <div class="card">
+            <h2>Suggestion Class Example</h2>
+            <div class="autosuggest-container">
+                <input type="text" id="autocomplete" placeholder="Type to Select Countries">
+                <div id="suggestions-list" class="suggestions-list"></div>
+            </div>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="card">
+            <h2>Dropdown Example</h2>
+            <select id="dropdown-class-example">
+                <option value="">Select Option</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="card">
+            <h2>Checkbox Example</h2>
+            <label>
+                <input type="checkbox" id="checkBoxOption1" value="option1"> Option 1
+            </label>
+            <label>
+                <input type="checkbox" id="checkBoxOption2" value="option2"> Option 2
+            </label>
+            <label>
+                <input type="checkbox" id="checkBoxOption3" value="option3"> Option 3
+            </label>
+        </div>
+
+        <!-- Switch Window -->
+        <div class="card">
+            <h2>Switch Window Example</h2>
+            <button id="openwindow">Open Window</button>
+        </div>
+
+        <!-- Switch Tab -->
+        <div class="card">
+            <h2>Switch Tab Example</h2>
+            <button id="opentab" class="secondary">Open Tab</button>
+        </div>
+
+        <!-- Switch To Alert -->
+        <div class="card">
+            <h2>Switch To Alert Example</h2>
+            <input type="text" id="name" placeholder="Enter Your Name">
+            <div style="display: flex; gap: 1rem;">
+                <button id="alertbtn">Alert</button>
+                <button id="confirmbtn" class="secondary">Confirm</button>
+            </div>
+        </div>
+
+        <!-- Element Displayed -->
+        <div class="card">
+            <h2>Element Displayed Example</h2>
+            <input type="text" id="displayed-text" placeholder="Hide/Show Example" style="display: block;">
+            <div style="display: flex; gap: 1rem;">
+                <button id="hide-textbox">Hide</button>
+                <button id="show-textbox" class="secondary">Show</button>
+            </div>
+        </div>
+
+        <!-- Mouse Hover -->
+        <div class="card">
+            <h2>Mouse Hover Example</h2>
+            <div class="dropdown">
+                <button class="dropbtn">Mouse Hover</button>
+                <div class="dropdown-content">
+                    <a href="#top">Top</a>
+                    <a href="">Reload</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web Table -->
+        <div class="card full-width">
+            <h2>Web Table Example</h2>
+            <div class="table-container">
+                <table id="product">
+                    <thead>
+                        <tr>
+                            <th>Instructor</th>
+                            <th>Course</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rahul Shetty</td>
+                            <td>Selenium Webdriver with Java Basics + Advanced + Interview Guide</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Rahul Shetty</td>
+                            <td>Learn SQL in 100 Pages : Master SQL Queries</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Rahul Shetty</td>
+                            <td>Appium Mobile Automation Testing from Scratch</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Rahul Shetty</td>
+                            <td>WebSecurity Testing for Beginners-QA knowledge to next level</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Rahul Shetty</td>
+                            <td>Learn JMeter from Scratch - (Performance + Load) Testing Tool</td>
+                            <td>25</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Fixed Header Table -->
+        <div class="card full-width">
+            <h2>Web Table Fixed Header Example</h2>
+            <div class="table-container fixed-header-table">
+                <table id="product">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>City</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alex</td>
+                            <td>Engineer</td>
+                            <td>Chennai</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>Ben</td>
+                            <td>Mechanic</td>
+                            <td>Bengaluru</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>Dwayne</td>
+                            <td>Manager</td>
+                            <td>Kolkata</td>
+                            <td>48</td>
+                        </tr>
+                        <tr>
+                            <td>Ivory</td>
+                            <td>Receptionist</td>
+                            <td>Chennai</td>
+                            <td>18</td>
+                        </tr>
+                         <tr>
+                            <td>Jack</td>
+                            <td>Engineer</td>
+                            <td>Pune</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>Joe</td>
+                            <td>Mechanic</td>
+                            <td>Mumbai</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Tom</td>
+                            <td>Manager</td>
+                            <td>Delhi</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <td>Jerry</td>
+                            <td>Receptionist</td>
+                            <td>Noida</td>
+                            <td>19</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Generic iFrame -->
+        <div class="card full-width">
+            <h2>Generic iFrame Example</h2>
+            <div class="iframe-container">
+                <iframe src="https://www.wikipedia.org" id="generic-iframe"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js></script>
+</body>
+</html>
+
