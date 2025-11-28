@@ -46,6 +46,11 @@ jobs:
         retention-days: 30
     - uses: act10ns/slack@v1
       if: always()
+    - name: Show npm log
+       if: failure()
+        run: cat /home/runner/.npm/_logs/*.log
+
+      
       with:
         status: ${{ job.status }}
         config: .github/config/slack.yml
