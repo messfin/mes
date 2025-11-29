@@ -1,14 +1,17 @@
 {
-  "name": "playwright-tests",
-  "version": "1.0.0",
-  "private": true,
   "scripts": {
-    "test": "playwright test",
-    "test-ui": "playwright test",
-    "test-ui-c": "playwright test"
+    "test-ui-c": "npx playwright test --project=chromium",
+    "test-ui-auth-admin": "npx playwright test tests/ui/specs-auth/profile-stored-auth-multi-role-admin.spec.ts",
+    "test-ui-auth-user": "npx playwright test tests/ui/specs-auth/profile-stored-auth-multi-role-user.spec.ts",
+    "test-ui-auth": "npx playwright test tests/ui/specs-auth/profile-stored-auth-multi-role-example.spec.ts",
+    "test-vrt": "npx playwright test tests/ui/specs/visual-regression.spec.ts"
   },
   "devDependencies": {
-    "playwright": "^1.56.1",
-    "@playwright/test": "^1.56.1"
-  }
+  "@playwright/test": "1.57.0",
+  "playwright": "1.57.0",
+  "@types/node": "^24.10.1",
+  "dotenv": "^17.2.3",
+  "ts-node": "^10.9.2",
+  "typescript": "^5.9.3"
+}
 }
