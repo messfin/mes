@@ -20,6 +20,7 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v4
 
@@ -28,9 +29,11 @@ jobs:
         node-version: 20
         cache: 'npm'
 
+    # Install dependencies (lock file is now correct)
     - name: Install dependencies
       run: npm ci
 
+    # Upload npm logs if installation fails
     - name: Show npm logs
       if: failure()
       run: cat /home/runner/.npm/_logs/*.log || echo "No npm logs found"
@@ -43,22 +46,24 @@ jobs:
         path: /home/runner/.npm/_logs/
         retention-days: 14
 
+    # Install Playwright browsers
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
-    # -----------------------------------------------------------
-    # 🟢 START YOUR UI SERVER ON PORT 3000
-    # -----------------------------------------------------------
+    # ----------------------------
+    # Start UI server for tests
+    # ----------------------------
     - name: Start UI server
       run: npm start &
-    
-    - name: Wait for UI to be ready
-      run: npx wait-on http://localhost:3000
-    # -----------------------------------------------------------
 
+    - name: Wait for UI server
+      run: npx wait-on http://localhost:3000
+
+    # Run Playwright tests
     - name: Run Playwright tests
       run: npm run test-ui-c
 
+    # Upload test reports
     - uses: actions/upload-artifact@v4
       if: always()
       with:
@@ -73,6 +78,7 @@ jobs:
         path: test-results/
         retention-days: 30
 
+    # Send Slack notification
     - uses: act10ns/slack@v1
       if: always()
       with:
