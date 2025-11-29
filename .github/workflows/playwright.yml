@@ -31,12 +31,10 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    # >>> ADDED: Print npm logs if npm CI fails
     - name: Show npm logs
       if: failure()
       run: cat /home/runner/.npm/_logs/*.log || echo "No npm logs found"
 
-    # >>> ADDED: Upload npm logs as an artifact
     - name: Upload npm error logs
       if: failure()
       uses: actions/upload-artifact@v4
@@ -47,6 +45,16 @@ jobs:
 
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+
+    # -----------------------------------------------------------
+    # 🟢 START YOUR UI SERVER ON PORT 3000
+    # -----------------------------------------------------------
+    - name: Start UI server
+      run: npm start &
+    
+    - name: Wait for UI to be ready
+      run: npx wait-on http://localhost:3000
+    # -----------------------------------------------------------
 
     - name: Run Playwright tests
       run: npm run test-ui-c
